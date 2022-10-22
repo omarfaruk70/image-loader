@@ -10,6 +10,7 @@ button.onclick = () =>{
 input.addEventListener('change', function(){
     myFile = this.files[0];
     container.classList.add('active');
+    showPicture();
 })
 container.addEventListener('dragover', (text) => {
     event.preventDefault();
@@ -27,7 +28,7 @@ container.addEventListener('drop', () =>{
 
 function showPicture(){
     let fileType = myFile.type;
-    let  validExtention  = ['image/jpg', 'image/pnh'];
+    let  validExtention  = ['image/jpg', 'image/png'];
 
     if(validExtention.includes(fileType)){
         let fileReader = new fileReader();
